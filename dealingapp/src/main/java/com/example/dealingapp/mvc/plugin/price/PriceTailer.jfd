@@ -1,0 +1,42 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_65" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "pref:grow(0.11), pref:grow(0.11), pref:grow(0.11), pref:grow(0.17), pref:grow(0.17), pref:grow(0.11), pref:grow(0.11), pref:grow(0.11)"
+			"$rowSpecs": "fill:pref:grow"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "21:38:22"
+				"border": new javax.swing.border.MatteBorder( 0, 1, 1, 0, sfield java.awt.Color gray )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridWidth": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "0.8"
+				"border": new javax.swing.border.MatteBorder( 0, 0, 1, 0, sfield java.awt.Color gray )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 4
+				"gridWidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "21:38:33"
+				"border": new javax.swing.border.MatteBorder( 0, 0, 1, 1, sfield java.awt.Color gray )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 6
+				"gridWidth": 3
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

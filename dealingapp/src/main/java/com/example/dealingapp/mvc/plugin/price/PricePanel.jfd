@@ -1,0 +1,39 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_65" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "pref:grow(0.5), pref:grow(0.5)"
+			"$rowSpecs": "fill:pref:grow(0.3), fill:pref:grow(0.3), fill:pref:grow(0.4)"
+		} ) {
+			name: "this"
+			add( new FormComponent( "com.example.dealingapp.mvc.plugin.price.PriceHeader" ) {
+				name: "priceHeader1"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridWidth": 2
+			} )
+			add( new FormComponent( "com.example.dealingapp.mvc.plugin.price.Price" ) {
+				name: "price1"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 2
+			} )
+			add( new FormComponent( "com.example.dealingapp.mvc.plugin.price.Price" ) {
+				name: "price2"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 2
+				"gridY": 2
+			} )
+			add( new FormComponent( "com.example.dealingapp.mvc.plugin.price.PriceTailer" ) {
+				name: "priceTailer1"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 3
+				"gridWidth": 2
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 205, 160 )
+		} )
+	}
+}
