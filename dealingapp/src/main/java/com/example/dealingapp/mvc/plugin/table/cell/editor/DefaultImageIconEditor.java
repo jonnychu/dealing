@@ -7,6 +7,7 @@ import javax.swing.AbstractCellEditor;
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
 
+@SuppressWarnings("serial")
 public class DefaultImageIconEditor  extends AbstractCellEditor implements TableCellEditor {
 
     public boolean isCellEditable(EventObject e) {

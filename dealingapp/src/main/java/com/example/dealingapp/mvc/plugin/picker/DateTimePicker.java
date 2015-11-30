@@ -11,6 +11,7 @@ import com.jgoodies.forms.layout.*;
 /**
  * @author jonny
  */
+@SuppressWarnings("serial")
 public class DateTimePicker extends JPanel {
 
 	private JFormattedTextField dateField;

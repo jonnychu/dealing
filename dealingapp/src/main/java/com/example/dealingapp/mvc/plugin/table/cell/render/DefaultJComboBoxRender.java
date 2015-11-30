@@ -6,6 +6,7 @@ import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.table.TableCellRenderer;
 
+@SuppressWarnings("serial")
 public class DefaultJComboBoxRender extends JComboBox<String> implements TableCellRenderer {
 	
 	public DefaultJComboBoxRender(String[] values) {

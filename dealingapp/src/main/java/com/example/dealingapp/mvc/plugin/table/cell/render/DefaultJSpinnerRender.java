@@ -6,6 +6,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.table.TableCellRenderer;
 
+@SuppressWarnings("serial")
 public class DefaultJSpinnerRender extends JSpinner implements TableCellRenderer  {
 
 	public DefaultJSpinnerRender(){

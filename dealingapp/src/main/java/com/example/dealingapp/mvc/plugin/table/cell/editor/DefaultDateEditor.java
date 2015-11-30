@@ -9,6 +9,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class DefaultDateEditor extends DefaultCellEditor {
 
 	private static final String DEFAULT_PATTERN = "yyyy/MM/dd HH:mm:ss";

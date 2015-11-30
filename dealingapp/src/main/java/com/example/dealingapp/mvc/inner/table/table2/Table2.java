@@ -23,7 +23,6 @@ import com.example.dealingapp.mvc.inner.AbstractInnerFrame;
 import com.example.dealingapp.mvc.plugin.table.GTable;
 import com.example.dealingapp.mvc.plugin.table.GTableColumn;
 import com.example.dealingapp.mvc.plugin.table.GTableHeaderColumnGroup;
-import com.example.dealingapp.mvc.plugin.table.GTableRowSorter;
 import com.example.dealingapp.mvc.plugin.table.cell.editor.DefaultDateEditor;
 import com.example.dealingapp.mvc.plugin.table.cell.editor.DefaultImageIconEditor;
 import com.example.dealingapp.mvc.plugin.table.cell.editor.DefaultJButtonEditor;
@@ -39,10 +38,12 @@ import com.example.dealingapp.mvc.plugin.table.cell.render.DefaultJSpinnerRender
 import com.example.dealingapp.mvc.plugin.table.cell.render.DefaultProgressCellRenderer;
 import com.example.dealingapp.mvc.plugin.table.model.GTableColumnModel;
 import com.example.dealingapp.mvc.plugin.table.model.GTableModel;
+import com.example.dealingapp.mvc.plugin.table.sorter.GTableRowSorter;
 import com.example.dealingapp.mvc.plugin.table.test.row.MyRow;
 import com.example.dealingapp.util.ComponentFactory;
 import com.jgoodies.forms.builder.FormBuilder;
 
+@SuppressWarnings("serial")
 public class Table2 extends AbstractInnerFrame {
 
 	private JButton btnShowData;
@@ -65,24 +66,24 @@ public class Table2 extends AbstractInnerFrame {
 
 		//
 		List<GTableColumn> rows = new ArrayList<>();
-		GTableColumn col1 = new GTableColumn("", "col1", "num", "setRowNum", "getRowNum", Integer.class, 40,
-				true, MyRow.class);
-		GTableColumn col2 = new GTableColumn("", "col2", "money", "setMoney", "getMoney", BigDecimal.class,
+		GTableColumn col1 = new GTableColumn("", "col1", "num", "setRowNum", "getRowNum", Integer.class, 40, true,
+				MyRow.class);
+		GTableColumn col2 = new GTableColumn("", "col2", "money", "setMoney", "getMoney", BigDecimal.class, 120, false,
+				MyRow.class);
+		GTableColumn col3 = new GTableColumn("", "col3", "mark", "setjComboBox", "getjComboBox", String.class, 120,
+				false, MyRow.class);
+		GTableColumn col4 = new GTableColumn("", "col4", "mark-2", "setCheckBox", "getCheckBox", Boolean.class, 40,
+				false, MyRow.class);
+		GTableColumn col5 = new GTableColumn("", "col5", "mark-3", "setjButton", "getjButton", String.class, 80, false,
+				MyRow.class);
+		GTableColumn col6 = new GTableColumn("", "col6", "mark-4", "setSpinner", "getSpinner", Integer.class, 60, false,
+				MyRow.class);
+		GTableColumn col7 = new GTableColumn("", "col7", "updatetime", "setUpdateTime", "getUpdateTime", Date.class,
 				120, false, MyRow.class);
-		GTableColumn col3 = new GTableColumn("", "col3", "mark", "setjComboBox", "getjComboBox",
-				String.class, 120, false, MyRow.class);
-		GTableColumn col4 = new GTableColumn("", "col4", "mark-2", "setCheckBox", "getCheckBox",
-				Boolean.class, 40, false, MyRow.class);
-		GTableColumn col5 = new GTableColumn("", "col5", "mark-3", "setjButton", "getjButton", String.class,
-				80, false, MyRow.class);
-		GTableColumn col6 = new GTableColumn("", "col6", "mark-4", "setSpinner", "getSpinner",
-				Integer.class, 60, false, MyRow.class);
-		GTableColumn col7 = new GTableColumn("", "col7", "updatetime", "setUpdateTime", "getUpdateTime",
-				Date.class, 120, false, MyRow.class);
-		GTableColumn col8 = new GTableColumn("", "col7", "status", "setImage", "getImage", Integer.class,
-				60, false, MyRow.class);
-		GTableColumn col9 = new GTableColumn("", "col7", "progress", "setProgress", "getProgress",
-				Integer.class, 200, false, MyRow.class);
+		GTableColumn col8 = new GTableColumn("", "col7", "status", "setImage", "getImage", Integer.class, 60, false,
+				MyRow.class);
+		GTableColumn col9 = new GTableColumn("", "col7", "progress", "setProgress", "getProgress", Integer.class, 200,
+				false, MyRow.class);
 
 		rows.add(col1);
 		rows.add(col2);
@@ -123,7 +124,7 @@ public class Table2 extends AbstractInnerFrame {
 		col6.setCellEditor(new DefaultJSpinnerEditor());
 		//
 		col7.setCellRenderer(new DefaultDateRender("yyyy/MM/dd HH:mm:ss"));
-		col7.setCellEditor(new DefaultDateEditor(new JTextField(),"yyyy/MM/dd HH:mm:ss"));
+		col7.setCellEditor(new DefaultDateEditor(new JTextField(), "yyyy/MM/dd HH:mm:ss"));
 		//
 		col8.setCellRenderer(new DefaultImageIconRender());
 		col8.setCellEditor(new DefaultImageIconEditor());
@@ -142,7 +143,7 @@ public class Table2 extends AbstractInnerFrame {
 		group3.add(col6);
 		group3.add(col7);
 		group3.add(col8);
-		List root = new ArrayList<>();
+		List<GTableHeaderColumnGroup> root = new ArrayList<>();
 		root.add(group1);
 
 		GTable table = new GTable();
@@ -152,9 +153,9 @@ public class Table2 extends AbstractInnerFrame {
 		table.setColumnModel(colModelFix);
 		table.setTableHeaderGroup(root, 3);
 		//
-	    GTableRowSorter<GTableModel> sorter = new GTableRowSorter<>(tableModel);
-	    sorter.setComparators(colModelFix);
-	    table.setRowSorter(sorter);
+		GTableRowSorter<GTableModel> sorter = new GTableRowSorter<>(tableModel);
+		sorter.setComparators(colModelFix);
+		table.setRowSorter(sorter);
 
 		btnAdd = ComponentFactory.XJButton.create("Mock data", "mock data", new ActionListener() {
 			@Override
@@ -163,7 +164,7 @@ public class Table2 extends AbstractInnerFrame {
 
 					@Override
 					public void run() {
-						List rows = new ArrayList();
+						List<MyRow> rows = new ArrayList<>();
 						MyRow row = new MyRow();
 						row.setMark("what are u nong sha lei");
 						row.setMoney(new BigDecimal("0.0000"));
@@ -188,9 +189,9 @@ public class Table2 extends AbstractInnerFrame {
 
 					@Override
 					public void run() {
-						List allRows = ((GTableModel) table.getModel()).getRows();
+						List<?> allRows = ((GTableModel) table.getModel()).getRows();
 						StringBuffer message = new StringBuffer();
-						for (Iterator iterator = allRows.iterator(); iterator.hasNext();) {
+						for (Iterator<?> iterator = allRows.iterator(); iterator.hasNext();) {
 							MyRow myRow = (MyRow) iterator.next();
 							String s = "row num :" + myRow.getRowNum() + ", money:" + myRow.getMoney().toString()
 									+ ", combo:" + myRow.getjComboBox() + ", check:" + myRow.getCheckBox()

@@ -4,11 +4,10 @@ import java.awt.Component;
 import java.text.SimpleDateFormat;
 
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableCellRenderer;
 
+@SuppressWarnings("serial")
 public class DefaultDateRender extends DefaultTableCellRenderer {
 
 	private SimpleDateFormat formatter;

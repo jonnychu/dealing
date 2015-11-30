@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.dealingapp.mvc.Context;
-import com.example.dealingapp.mvc.login.Login;
 import com.jgoodies.forms.builder.FormBuilder;
 
 public abstract class AbstractInnerFrame extends JPanel{
@@ -31,7 +30,7 @@ public abstract class AbstractInnerFrame extends JPanel{
 		this.context = context;
 		FormBuilder builder = getLayoutBuilder();
 		if(builder == null){
-			this.LOGGER.error("can not find subclass builder");
+			LOGGER.error("can not find subclass builder");
 			return;
 		}
 		initGUI(builder);

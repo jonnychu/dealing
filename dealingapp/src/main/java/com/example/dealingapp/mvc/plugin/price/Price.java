@@ -17,7 +17,6 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
-import com.example.dealingapp.Dealing;
 import com.example.dealingapp.res.ResourceManager;
 import com.jgoodies.forms.factories.CC;
 import com.jgoodies.forms.layout.FormLayout;
@@ -25,6 +24,7 @@ import com.jgoodies.forms.layout.FormLayout;
 /**
  * @author jonny
  */
+@SuppressWarnings("serial")
 public class Price extends JPanel {
 
 	public Price() {

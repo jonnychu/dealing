@@ -7,6 +7,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JTable;
 import javax.swing.table.TableCellRenderer;
 
+@SuppressWarnings("serial")
 public class DefaultProgressCellRenderer extends JProgressBar implements TableCellRenderer {
 
 	public DefaultProgressCellRenderer(int min, int max) {

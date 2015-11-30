@@ -16,12 +16,11 @@ import com.example.dealingapp.mvc.inner.AbstractInnerFrame;
 import com.example.dealingapp.util.ComponentFactory;
 import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
-import com.jidesoft.popup.JidePopup;
 import com.jidesoft.spinner.DateSpinner;
-import com.jidesoft.spinner.PointSpinner;
 import com.jidesoft.swing.Calculator;
 import com.jidesoft.swing.MarqueePane;
 
+@SuppressWarnings("serial")
 public class Group1 extends AbstractInnerFrame{
 	
 	private JTextField name;
@@ -67,7 +66,7 @@ public class Group1 extends AbstractInnerFrame{
         horizonMarqueeLeft.setScrollDirection(MarqueePane.SCROLL_DIRECTION_RIGHT);
         
         DateSpinner dateSpinner = new DateSpinner("yyyy/MM/dd",new Date());
-        PointSpinner pointSpinner = new PointSpinner();
+//        PointSpinner pointSpinner = new PointSpinner();
         Calculator cal = new Calculator();
         
 		JPanel group2 = FormBuilder.create().debug(context.isDebug())

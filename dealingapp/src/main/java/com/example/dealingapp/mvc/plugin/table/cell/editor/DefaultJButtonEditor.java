@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
 
+@SuppressWarnings("serial")
 public class DefaultJButtonEditor extends AbstractCellEditor implements TableCellEditor {
 
 	private JButton jButton;

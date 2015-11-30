@@ -5,15 +5,12 @@ import java.awt.Container;
 import java.awt.Font;
 import java.awt.Window;
 
-import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
 import com.jgoodies.looks.FontPolicies;
 import com.jgoodies.looks.FontPolicy;
 import com.jgoodies.looks.FontSet;
 import com.jgoodies.looks.FontSets;
-import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.theme.DesertBluer;
 import com.jgoodies.looks.windows.WindowsLookAndFeel;
 
 /**
@@ -31,7 +28,7 @@ public class WinUtils {
 		}
 	}
 
-	private static void modifyFont(Component window, Font font) {
+	private static void modifyFont(final Component window, final Font font) {
 		window.setFont(font);
 		if (window instanceof Container) {
 			Container container = (Container) window;

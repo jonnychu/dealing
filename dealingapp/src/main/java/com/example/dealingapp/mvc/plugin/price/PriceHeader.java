@@ -13,6 +13,7 @@ import com.jgoodies.forms.layout.*;
 /**
  * @author jonny
  */
+@SuppressWarnings("serial")
 public class PriceHeader extends JPanel {
 	public PriceHeader() {
 		initComponents();

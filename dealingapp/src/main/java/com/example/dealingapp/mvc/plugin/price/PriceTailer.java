@@ -13,6 +13,7 @@ import com.jgoodies.forms.layout.*;
 /**
  * @author jonny
  */
+@SuppressWarnings("serial")
 public class PriceTailer extends JPanel {
 	public PriceTailer() {
 		initComponents();

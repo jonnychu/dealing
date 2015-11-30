@@ -18,6 +18,7 @@ import com.example.dealingapp.util.ComponentFactory;
 import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
 
+@SuppressWarnings("serial")
 public class Group3 extends AbstractInnerFrame {
 	
 	private JTextField name;

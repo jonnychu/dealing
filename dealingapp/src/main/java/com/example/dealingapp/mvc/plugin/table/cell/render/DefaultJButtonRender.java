@@ -8,6 +8,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.table.TableCellRenderer;
 
+@SuppressWarnings("serial")
 public class DefaultJButtonRender extends JButton implements TableCellRenderer {
 	
 	public DefaultJButtonRender(){

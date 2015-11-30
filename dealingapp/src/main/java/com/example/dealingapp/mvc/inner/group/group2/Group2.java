@@ -9,6 +9,7 @@ import com.example.dealingapp.mvc.plugin.ListGroupBuilderView;
 import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
 
+@SuppressWarnings("serial")
 public class Group2 extends AbstractInnerFrame{
 	
 	private ListGroupBuilderView group;
@@ -41,7 +42,7 @@ public class Group2 extends AbstractInnerFrame{
 	}
 
 	protected void loadData() {
-		List l = new ArrayList();
+		List<String> l = new ArrayList<>();
 		l.add("ShangHai");
 		l.add("TaiWan");
 		l.add("BeiJing");

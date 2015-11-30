@@ -19,11 +19,10 @@ import javax.swing.JPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.example.dealingapp.mvc.login.Login;
 import com.example.dealingapp.util.ComponentFactory;
-import com.jgoodies.forms.builder.ButtonStackBuilder;
 import com.jgoodies.forms.builder.FormBuilder;
 
+@SuppressWarnings("serial")
 public class ListGroupBuilderView extends JPanel {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ListGroupBuilderView.class);

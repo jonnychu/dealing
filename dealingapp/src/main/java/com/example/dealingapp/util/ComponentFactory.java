@@ -71,11 +71,11 @@ public class ComponentFactory {
 
 	public static class XJList {
 
-		public static JList create() {
+		public static JList<?> create() {
 			return create(null,null,null,null,null);
 		}
 		
-		public static JList create(String name,ListModel model,ListSelectionModel selModel,ListSelectionListener selListener,MouseListener mListener) {
+		public static JList<?> create(String name,ListModel model,ListSelectionModel selModel,ListSelectionListener selListener,MouseListener mListener) {
 			JList item = new JList();
 			if(model != null) item.setModel(model);
 			if(selModel != null) item.setSelectionModel(selModel);

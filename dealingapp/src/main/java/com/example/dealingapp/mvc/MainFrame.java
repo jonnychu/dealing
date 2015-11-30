@@ -21,6 +21,7 @@ import com.example.dealingapp.util.WinUtils;
 import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
 
+@SuppressWarnings("serial")
 public class MainFrame extends JFrame implements ActionListener {
 
 	private MenuTree tree;
@@ -77,10 +78,10 @@ public class MainFrame extends JFrame implements ActionListener {
 			@Override
 			public void run() {
 				try {
-					Class cls = Class.forName(e.getActionCommand());
-					Class[] paramTypes = { Context.class };
+					Class<?> cls = Class.forName(e.getActionCommand());
+					Class<?>[] paramTypes = { Context.class };
 					Object[] params = { context };
-					Constructor con = cls.getConstructor(paramTypes);
+					Constructor<?> con = cls.getConstructor(paramTypes);
 					AbstractInnerFrame aif = (AbstractInnerFrame)con.newInstance(params);
 					splitPane.remove(splitPane.getRightComponent());
 					splitPane.setRightComponent(aif);;

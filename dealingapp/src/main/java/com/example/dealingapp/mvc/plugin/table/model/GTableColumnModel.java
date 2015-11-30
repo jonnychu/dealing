@@ -7,7 +7,6 @@ import javax.swing.table.DefaultTableColumnModel;
 
 import com.example.dealingapp.mvc.plugin.table.GTableColumn;
 import com.example.dealingapp.mvc.plugin.table.GTableColumn.ColumnProperty;
-import com.example.dealingapp.mvc.plugin.table.sorter.SortButtonRenderer;
 
 public class GTableColumnModel extends DefaultTableColumnModel {
 

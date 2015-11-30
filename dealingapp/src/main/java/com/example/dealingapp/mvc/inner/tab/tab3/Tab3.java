@@ -4,6 +4,7 @@ import com.example.dealingapp.mvc.Context;
 import com.example.dealingapp.mvc.inner.AbstractInnerFrame;
 import com.jgoodies.forms.builder.FormBuilder;
 
+@SuppressWarnings("serial")
 public class Tab3 extends AbstractInnerFrame{
 
 	public Tab3(Context context) {

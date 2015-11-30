@@ -13,6 +13,7 @@ public class GTableHeaderRenders {
 	
 	private static Border border = UIManager.getBorder("TableHeader.cellBorder");
 	
+	@SuppressWarnings("serial")
 	public static class DefaultGTableHeaderColumnRender extends DefaultTableCellRenderer {
 		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
 				int row, int column) {
@@ -29,6 +30,7 @@ public class GTableHeaderRenders {
 		}
 	}
 	
+	@SuppressWarnings("serial")
 	public static class DefaultGTableHeaderRender extends DefaultTableCellRenderer {
 		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
 				boolean hasFocus, int row, int column) {

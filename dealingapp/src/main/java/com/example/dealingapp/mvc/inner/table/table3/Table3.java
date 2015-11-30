@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -37,6 +36,7 @@ import com.example.dealingapp.mvc.plugin.table.test.row.MyRow;
 import com.example.dealingapp.util.ComponentFactory;
 import com.jgoodies.forms.builder.FormBuilder;
 
+@SuppressWarnings("serial")
 public class Table3 extends AbstractInnerFrame {
 
 	private JButton btnShowData;
@@ -139,7 +139,7 @@ public class Table3 extends AbstractInnerFrame {
 		group3.add(col6);
 		group3.add(col7);
 		group3.add(col8);
-		List root = new ArrayList<>();
+		List<GTableHeaderColumnGroup> root = new ArrayList<>();
 		root.add(group1);
 
 		GTableFixColumnManager fixTable = new GTableFixColumnManager(rows, root, 3);
@@ -151,7 +151,7 @@ public class Table3 extends AbstractInnerFrame {
 
 					@Override
 					public void run() {
-						List rows = new ArrayList();
+						List<MyRow> rows = new ArrayList<>();
 						MyRow row = new MyRow();
 						row.setMark("what are u nong sha lei");
 						row.setMoney(new BigDecimal("0.0000"));
@@ -176,9 +176,9 @@ public class Table3 extends AbstractInnerFrame {
 
 					@Override
 					public void run() {
-						List allRows = ((GTableModel) fixTable.getTable().getModel()).getRows();
+						List<?> allRows = ((GTableModel) fixTable.getTable().getModel()).getRows();
 						StringBuffer message = new StringBuffer();
-						for (Iterator iterator = allRows.iterator(); iterator.hasNext();) {
+						for (Iterator<?> iterator = allRows.iterator(); iterator.hasNext();) {
 							MyRow myRow = (MyRow) iterator.next();
 							String s = "row num :" + myRow.getRowNum() + ", money:" + myRow.getMoney().toString()
 									+ ", combo:" + myRow.getjComboBox() + ", check:" + myRow.getCheckBox()

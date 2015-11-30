@@ -16,6 +16,7 @@ import javax.swing.border.LineBorder;
  * @blog http://sjsky.iteye.com
  * @author Michael
  */
+@SuppressWarnings("serial")
 public class JLabelUnderLinePerfect extends JLabel {
 
 	private Color underLineColor;

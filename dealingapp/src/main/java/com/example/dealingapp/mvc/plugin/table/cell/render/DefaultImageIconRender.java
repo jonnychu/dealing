@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 import com.example.dealingapp.res.ResourceManager;
 
+@SuppressWarnings("serial")
 public class DefaultImageIconRender extends DefaultTableCellRenderer{
 
 	public DefaultImageIconRender(){

@@ -10,6 +10,7 @@ import com.example.dealingapp.util.ComponentFactory;
 import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
 
+@SuppressWarnings("serial")
 public class DefaultInnerFrame extends AbstractInnerFrame {
 
 	private JTextField name;

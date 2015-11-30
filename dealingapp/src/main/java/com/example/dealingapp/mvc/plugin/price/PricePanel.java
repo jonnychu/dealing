@@ -8,14 +8,10 @@ import java.awt.Color;
 import java.awt.ScrollPane;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.CountDownLatch;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SwingWorker;
 import javax.swing.border.MatteBorder;
 
 import com.example.dealingapp.util.WinUtils;
@@ -26,6 +22,7 @@ import com.jgoodies.forms.layout.FormLayout;
 /**
  * @author jonny
  */
+@SuppressWarnings("serial")
 public class PricePanel extends JPanel {
 	public PricePanel() {
 		initComponents();

@@ -11,6 +11,7 @@ import com.example.dealingapp.mvc.plugin.table.GTableColumn.ColumnProperty;
 import com.example.dealingapp.mvc.plugin.table.model.GTableColumnModel;
 import com.example.dealingapp.mvc.plugin.table.model.GTableModel;
 
+@SuppressWarnings("serial")
 public class GTableFixColumnManager extends JScrollPane{
 
 	private List<GTableHeaderColumnGroup> colGroup;
@@ -24,8 +25,7 @@ public class GTableFixColumnManager extends JScrollPane{
 		fixedTable = createFixTable(deep);
 		table = createTable(deep);
 		//
-		fixedTable.setEnabled(false);
-		table.setEnabled(false);
+		fixedTable.getTableHeader().setResizingAllowed(false);
 		//
 		JViewport viewport = new JViewport();
 		viewport.setView(fixedTable);

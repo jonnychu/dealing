@@ -28,6 +28,7 @@ import com.jgoodies.binding.binder.Binders;
 import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
 
+@SuppressWarnings("serial")
 public class Login extends JDialog {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Login.class);

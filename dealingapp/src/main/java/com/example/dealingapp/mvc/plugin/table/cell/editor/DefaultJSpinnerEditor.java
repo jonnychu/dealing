@@ -12,6 +12,7 @@ import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.table.TableCellEditor;
 
+@SuppressWarnings("serial")
 public class DefaultJSpinnerEditor extends AbstractCellEditor implements TableCellEditor {
 
 	private final int clickCountToStart=1;

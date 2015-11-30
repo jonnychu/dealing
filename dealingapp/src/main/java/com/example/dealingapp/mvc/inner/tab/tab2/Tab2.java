@@ -8,6 +8,7 @@ import com.jgoodies.forms.builder.FormBuilder;
 import com.jgoodies.forms.factories.Paddings;
 import com.jidesoft.swing.JideTabbedPane;
 
+@SuppressWarnings("serial")
 public class Tab2 extends AbstractInnerFrame {
 
 	public Tab2(Context context) {
