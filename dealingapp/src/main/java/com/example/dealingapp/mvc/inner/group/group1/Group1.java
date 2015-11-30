@@ -6,7 +6,10 @@ import java.util.Date;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
+import org.jdesktop.swingx.JXTaskPane;
 
 import com.example.dealingapp.mvc.Context;
 import com.example.dealingapp.mvc.inner.AbstractInnerFrame;
@@ -33,7 +36,7 @@ public class Group1 extends AbstractInnerFrame{
 	protected FormBuilder getLayoutBuilder() {
 		return FormBuilder.create().debug(context.isDebug())
 				.columns("$lcgap,fill:pref:grow,$lcgap")
-				.rows("$lcgap,fill:pref,$lcgap,fill:pref,$lcgap")
+				.rows("$lcgap,fill:pref,$lcgap,fill:pref,$lcgap,fill:pref,$lcgap")
 				.padding(Paddings.EMPTY);
 	}
 
@@ -50,7 +53,7 @@ public class Group1 extends AbstractInnerFrame{
 		JPanel group = FormBuilder.create().debug(context.isDebug())
 				.padding(Paddings.DLU21)
 				.columns("$lcgap,right:pref,$lcgap,left:pref,$lcgap")
-				.rows("$lcgap,center:pref,$lcgap,center:pref,$lcgap,center:pref,$lcgap")
+				.rows("$lcgap,center:pref,$lcgap,center:pref,$lcgap,center:pref,$lcgap,center:pref,$lcgap")
 				.border(BorderFactory.createTitledBorder("GROUP1"))
 				.add("Name").xy(2, 2)
 				.add(name).xy(4, 2)
@@ -77,6 +80,17 @@ public class Group1 extends AbstractInnerFrame{
 				.add(cal).xy(2, 6)
 				.build();
 		
-		builder.add(group).xy(2, 2).add(group2).xy(2, 4);
+		JXTaskPane taskPane = new JXTaskPane("hello");
+		taskPane.add(new JTextArea("Hello taskpane.......................................................\r\n Hohoho!!!"));
+		
+		JPanel group3 = FormBuilder.create().debug(context.isDebug())
+				.padding(Paddings.DLU21)
+				.columns("$lcgap,fill:pref,$lcgap")
+				.rows("$lcgap,fill:pref,$lcgap,fill:pref,$lcgap,fill:pref,$lcgap")
+				.border(BorderFactory.createTitledBorder("GROUP3"))
+				.add(taskPane).xy(2, 2)
+				.build();
+		
+		builder.add(group).xy(2, 2).add(group2).xy(2, 4).add(group3).xy(2, 6);
 	}
 }
