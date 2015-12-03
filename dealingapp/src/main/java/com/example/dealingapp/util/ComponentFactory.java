@@ -8,6 +8,7 @@ import java.awt.event.MouseListener;
 import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JSpinner;
 import javax.swing.JTable;
@@ -53,6 +54,18 @@ public class ComponentFactory {
 				item.setColumnModel(tColModel);
 			if (lSelModel != null)
 				item.setSelectionModel(lSelModel);
+			return item;
+		}
+	}
+	
+	public static class XJMenu {
+
+		public static JMenu create(String text, String actionCommand, ActionListener listener) {
+			JMenu item = new JMenu(text == null ? "" : text);
+			if (actionCommand != null)
+				item.setActionCommand(actionCommand);
+			if (listener != null)
+				item.addActionListener(listener);
 			return item;
 		}
 	}
